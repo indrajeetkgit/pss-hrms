@@ -1,0 +1,1428 @@
+2025-03-17 00:27:37,702 ERROR frappe New Exception collected in error log
+Site: mysite.local
+Form Dict: {'doctype': 'Assignment Rule', 'filters': '[]', 'fields': '[]', 'distinct': 'false', 'cmd': 'frappe.desk.reportview.get_count'}
+2025-03-17 00:27:37,702 ERROR frappe New Exception collected in error log
+Site: mysite.local
+Form Dict: {'doctype': 'Assignment Rule', 'filters': '[]', 'fields': '[]', 'distinct': 'false', 'cmd': 'frappe.desk.reportview.get_count'}
+2025-03-17 00:27:37,702 ERROR frappe New Exception collected in error log
+Site: mysite.local
+Form Dict: {'doctype': 'ToDo', 'filters': '[["ToDo","status","=","Open",false]]', 'fields': '[]', 'distinct': 'false', 'cmd': 'frappe.desk.reportview.get_count'}
+2025-03-17 00:27:37,702 ERROR frappe New Exception collected in error log
+Site: mysite.local
+Form Dict: {'doctype': 'ToDo', 'filters': '[["ToDo","status","=","Open",false]]', 'fields': '[]', 'distinct': 'false', 'cmd': 'frappe.desk.reportview.get_count'}
+2025-03-17 16:59:30,520 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-17 16:59:30,524 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-17 16:59:35,051 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-17 16:59:35,054 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-17 16:59:41,371 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-17 16:59:41,374 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-17 16:59:42,826 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-17 16:59:42,828 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fe55e6e5bf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-17 17:05:01,087 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fa09f73dbf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fa09f73dbf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-17 17:05:01,091 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fa09f73dbf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fa09f73dbf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-17 17:05:02,259 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fa09f73dbf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fa09f73dbf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-17 17:05:02,261 ERROR frappe Unable to load translations
+Site: mysite.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fa09f73dbf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 97, in application
+    init_request(request)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/app.py", line 174, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 267, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1424, in setup_module_map
+    apps = get_installed_apps(_ensure_on_bench=True)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 65, in wrapper
+    return _cache[func][args_key]
+KeyError: ((), <object object at 0x7fa09f73dbf0>, frozenset({('_ensure_on_bench', True)}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 174, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 246, in hget
+    value = generator()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 162, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/translate.py", line 189, in get_translations_from_apps
+    for app in apps or frappe.get_installed_apps(_ensure_on_bench=True):
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/utils/caching.py", line 71, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/__init__.py", line 1309, in get_installed_apps
+    installed = json.loads(db.get_global("installed_apps") or "[]")
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1110, in get_global
+    return self.get_default(key, user)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1114, in get_default
+    d = self.get_defaults(key, parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 1130, in get_defaults
+    defaults = frappe.defaults.get_defaults_for(parent)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/defaults.py", line 245, in get_defaults_for
+    frappe.qb.from_(table)
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/query_builder/utils.py", line 79, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 232, in sql
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/database.py", line 131, in connect
+    self._conn: MySQLdbConnection | MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 104, in get_connection
+    conn = self._get_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 110, in _get_connection
+    return self.create_connection()
+  File "/home/indrajeet/projects/bench/my-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/indrajeet/projects/bench/my-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
